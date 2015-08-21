@@ -1,0 +1,36 @@
+<div class="container-fluid text-center">
+  	<div class="col-md-5 col-md-offset-1">
+  		<h4 class="text-center">People You Follow</h1>
+		<table class="table table-bordered table-hover">
+			<tr>
+				<th class="text-center resize_column defaultTable">User Name</th>
+				<th></th>
+			</tr>
+			<% current_user.followees.each do |t| %>
+				<tr>
+				    <td><%= t.account_name %></td>
+				    <td><%= link_to "Unfollow", unfollow_user_path(t.id) %></td>	
+		 	    </tr>
+			<% end %>
+		</table>
+	</div>
+	<div class="col-md-5"> 
+  		<h4 class="text-center">People Who Follow You</h1>
+		<table class="table table-bordered table-hover">
+			<tr>
+				<th class="text-center resize_column defaultTable">User Name</th>
+				<th></th>
+			</tr>
+			<% current_user.followers.each do |t| %>
+				<tr>
+				    <td><%= t.account_name %></td>
+				    <td><%= link_to "View Todolists", follower_todolist_path(t.id) %></td>	
+		 	    </tr>
+			<% end %>
+		</table>
+	</div>
+	<div class="text-center">
+		<%= content_tag 'canvas', '', id: 'orders_chart', width: '800', height: '400', data: {orders: (Order.week_ago.map &:total), dates: (Order.week_ago.map &:created_at)} %>
+		<!-- <canvas id="myChart" width="800" height="400"></canvas> -->
+	</div>
+</div>

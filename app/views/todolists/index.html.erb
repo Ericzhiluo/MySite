@@ -1,0 +1,40 @@
+<div class="container-fluid text-center">
+  	<div class="col-md-10 col-md-offset-1">
+  		<h1 class="text-center">Todolists For <%= current_user.account_name.humanize %></h1>
+		<table class="table table-bordered table-hover">
+			<tr>
+				<th class="text-center resize_column defaultTable">ID</th>
+				<th class="text-center resize_column defaultTable">TODOITEMS</th>
+				<th class="text-center resize_column defaultTable">START</th>
+				<th class="text-center resize_column defaultTable">END</th>
+				<th></th>
+			</tr>
+			<% @todolists.each do |t| %>
+				<tr>
+				    <td><%= t.id %></td>
+				    <td><%=t.todoitems%></td>
+				    <td><%=t.start%></td>
+				    <td><%=t.end%></td>	
+				    <td><%= link_to "Edit", edit_todolist_path(t.id)%>
+				    <%= link_to "| Show Detail", todolist_path(t.id)%></td>	
+		 	    </tr>
+			<% end %>
+		</table>
+		</div>
+	<!-- 	<a href="/todolist/delete">Delete</a>
+		<a href="/todolist/add">Add</a> --> 
+		<div class="row">
+  			<div class="col-md-6">
+				<%= form_tag(search_todolists_path, :method => :get) do %>
+				  <%= text_field_tag(:searchid) %>
+				  <%= submit_tag("Search By ID", :class=>"btn btn-default") %>
+				<% end %>
+			</div>
+		<div class="col-md-6">
+			<%= form_tag(todolist_path(:id),:method => :delete) do %>
+				<%= text_field_tag(:destroyid) %>
+			  	<%= submit_tag("Destroy By ID", :class=>"btn btn-default") %>
+			<% end %>
+		</div>
+	</div>
+</div>

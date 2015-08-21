@@ -1,0 +1,16 @@
+<div class="container-fluid text-center">
+  	<div class="col-md-4 col-md-offset-4">
+  		<h1 class="text-center">Search Result</h1>
+		<table class="table table-bordered table-hover">
+			<tr>
+				<th class="text-center resize_column defaultTable">Name</th>
+				<th class="text-center resize_column defaultTable">Action</th>
+			</tr>
+			<tr>
+			    <td><%= $search_result.account_name %></td>
+			    <td><%= link_to "Follow", follow_users_path %></td>	
+	 	    </tr>
+		</table>
+		</div>
+	</div>
+</div>

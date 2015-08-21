@@ -1,0 +1,23 @@
+<head>
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map-canvas');
+        var mapOptions = {
+          center: new google.maps.LatLng(43.77256,-79.40879),
+          zoom: 12,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+</head>
+<body>
+	<div class="paragraph container text-center">	
+		<h1 class="text-center">This Is Where Eric Lives!</h1>
+		<p>647-716-9000 ABCD@live.ca</p>
+	</div>	
+	
+	<div id="map-canvas" class="center-block"></div>
+</body>

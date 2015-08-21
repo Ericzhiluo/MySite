@@ -1,0 +1,21 @@
+<div class="container text-center">	
+	<h1>Details for this todoitem</h1>
+	<table class="table table-bordered table-hover  ">
+		<tr>
+			<th class="text-center resize_column defaultTable">ID</th>
+			<th class="text-center resize_column defaultTable">TODOITEMS</th>
+			<th class="text-center resize_column defaultTable">DURATION</th>
+			<th class="text-center resize_column defaultTable">CREATED AT</th>
+			<th class="text-center resize_column defaultTable">UPDATED AT</th>
+			<th></th>
+		</tr>
+		<tr>
+		    <td><%= @todolistshow.id %></td>
+		    <td><%=@todolistshow.todoitems%></td>
+		    <td><%=@todolistshow.duration%></td>	
+		    <td><%=@todolistshow.created_at%></td>
+		    <td><%=@todolistshow.updated_at%></td>	
+		    <td><%= link_to "Edit", edit_todolist_path(@todolistshow.id)%></td>	
+	    </tr>
+	</table>
+</div>

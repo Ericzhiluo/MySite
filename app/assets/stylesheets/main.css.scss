@@ -1,0 +1,91 @@
+.mainimage {
+    background-position: center center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+	height: 650px;
+	margin-top:-10px;
+	background-image: image-url("sea2.jpg");
+}
+
+.paragraph{
+	margin-right:30px;
+	margin-left:30px;
+}
+
+.mainimageword{
+	margin-top: 280px;
+	font-weight: 900;
+	color:white; 
+}
+
+.minion{
+	height: 50%;
+	width: 50%;
+	display:block;
+}
+
+.aboutp{
+	margin-top:20px;
+	font-size:15px;
+	text-align: justify;
+}
+
+.toggle{
+	margin-bottom:20px;
+	margin-top:20px;
+}
+
+.choiceselected{
+	border-radius: 10px;
+	border: 5px ridge black;
+}
+
+.imgpaper{
+	padding:5px;
+}
+
+.imgscissor{
+	padding:5px;
+}
+
+.imgrock{
+	padding:5px;
+}
+
+.gamepicture{
+	cursor:pointer;
+}
+
+#map-canvas{
+    width: 100%;
+    height: 450px;
+}
+
+body {padding-top: 60px;}
+
+.navbar-center{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin: auto;
+    padding-top: 5px;
+}
+
+.navbar{
+   background: rgba(255,255,255,0.6);
+}
+
+.navbar-default .navbar-brand {
+    color: black;
+    font-weight: 550;
+    font-size: 150%
+}
+
+span.glyphicon {
+    margin-right: 5px;
+}
+
+.dropdown-menu.todolists-menu{
+	width: 230px
+}

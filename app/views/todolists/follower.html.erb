@@ -1,0 +1,22 @@
+<div class="container-fluid text-center">
+  	<div class="col-md-10 col-md-offset-1">
+  		<h1 class="text-center">Todolists For <%= @follower_name.humanize %></h1>
+		<table class="table table-bordered table-hover">
+			<tr>
+				<th class="text-center resize_column defaultTable">ID</th>
+				<th class="text-center resize_column defaultTable">TODOITEMS</th>
+				<th class="text-center resize_column defaultTable">START</th>
+				<th class="text-center resize_column defaultTable">END</th>
+			</tr>
+			<% @follower_todolist.each do |t| %>
+				<tr>
+				    <td><%= t.id %></td>
+				    <td><%=t.todoitems%></td>
+				    <td><%=t.start%></td>
+				    <td><%=t.end%></td>	
+		 	    </tr>
+			<% end %>
+		</table>
+		</div>
+	</div>
+</div>
