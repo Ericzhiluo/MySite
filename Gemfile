@@ -8,10 +8,10 @@ gem 'rails', '4.1.8'
 #   gem 'sqlite3'
 # end
 
-gem 'sqlite3'
+# gem 'sqlite3'
 gem 'pg'
 gem "cf-autoconfig", "~> 0.2.1"
-gem 'rails_12factor', group: :production
+gem 'rails_12factor'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
