@@ -9,6 +9,7 @@ gem 'rails', '4.1.8'
 # end
 
 # gem 'sqlite3'
+gem 'taps'
 gem 'pg'
 gem "cf-autoconfig", "~> 0.2.1"
 gem 'rails_12factor'
