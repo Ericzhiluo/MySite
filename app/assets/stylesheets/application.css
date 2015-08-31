@@ -15,4 +15,6 @@
  *= require bootstrap
  *= require jquery-ui
  *= require font-awesome
+ *= require footer-distributed
+ *= require main.css.scss
  */
