@@ -12,19 +12,17 @@ $(document).ready(function(){
 	$("#datepicker").datepicker({dateFormat : "yy-mm-dd"});
 	$("#datepicker2").datepicker({dateFormat : "yy-mm-dd "});
 
-	$(".transcript_upload").click(function() {
-            window.alert("Test")
-            // var openFile = function(event) {
-            //     var input = event.target;
+      var fileInput = $('#file_upload')[0]; // or var fileInput = document.getElementById('fileInput');
 
-            //     var reader = new FileReader();
-            //     reader.onload = function(){
-            //         var text = reader.result;
-            //         console.log(reader.result.substring(0, 200));
-            //         $(".transcript_output").after("<p>" + reader.result + "</p>");
-            //     };
-            //     reader.readAsText(input.files[0]);
-            // };
-        })
+        $("#submit_file").click(function() {
+            var file = fileInput.files[0];
+            var textType = /text.*/;
+
+            var reader = new FileReader();
+            reader.readAsText(file);  
+            reader.onload = function(e) {
+                $(".transcript_output").after(reader.result.split("\r\n"));
+            }  
+        });
 })
 
