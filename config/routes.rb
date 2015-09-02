@@ -28,7 +28,8 @@ Rails.application.routes.draw do
     get 'pages/gallery'
     get 'pages/game'
     get 'pages/about'
-    get 'pages/contact' 
+    get 'pages/contact'
+    get 'pages/transcript' 
 
     #match '/todolist/search', to: 'todolists#search', via: :get, as: 'search_todolist'
     #get '/todolist/search', to: 'todolists#search', as: 'search_todolist'
