@@ -15,9 +15,9 @@ $(document).ready(function(){
       var fileInput = $('#file_upload')[0]; // or var fileInput = document.getElementById('fileInput');
       var fileDisplayArea = document.getElementById('fileDisplayArea');
             $("#submit_file").click(function() {
+                  $('.trans_output').empty();
                   var file = fileInput.files[0];
                   var textType = /text.*/;
-
                   var reader = new FileReader();
                   reader.readAsText(file);  
                   reader.onload = function(e) {
@@ -28,7 +28,7 @@ $(document).ready(function(){
                               "<li><strong>Event: </strong></li>" + x[7] +
                               "<li><strong>Date: </strong></li>" + x[8]
                         );
-                  }  
+                  }
             });
 
       $(".hide-code").click(function() {
