@@ -20,3 +20,5 @@
 //= require game
 //= require drawchart
 //= require Chart
+//= require d3
+// require sequences
